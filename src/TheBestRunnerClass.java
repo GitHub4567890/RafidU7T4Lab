@@ -25,5 +25,18 @@ public class TheBestRunnerClass {
 
         System.out.println("AFTER: " + names);
 
+        // "Frank's" solution
+
+        System.out.println("BEFORE: " + names);
+
+        for (int i = 0; i < names.size(); i++) {
+            if (names.get(i).indexOf("i") != -1) {
+                names.add(i + 1, "hi!");
+            }
+        }
+
+        System.out.println("AFTER: " + names);
+
+
     }
 }
