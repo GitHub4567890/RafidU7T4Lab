@@ -116,6 +116,64 @@ public class TheBestRunnerClass {
         ArrayList<String> reversedWords3 = ArrayListAlgorithms.parseWordsAndReverse(mySentence3);
         System.out.println(reversedWords3);
 
+        System.out.println();
+
+        ArrayList<Integer> intList14 = new ArrayList<Integer>(Arrays.asList(1, 1, 2, 4, 5, 2, 2, 1, 6, 4, 4, 7, 1, 8, 4, 2));
+        ArrayListAlgorithms.removeDuplicates(intList14);
+        System.out.println(intList14);
+        ArrayList<Integer> intList15 = new ArrayList<Integer>(Arrays.asList(1, 1, 1, 2, 1, 1, 1, 1, 3, 2, 1, 2, 2, 4, 3));
+        ArrayListAlgorithms.removeDuplicates(intList15);
+        System.out.println(intList15);
+        ArrayList<Integer> intList16 = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5));
+        ArrayListAlgorithms.removeDuplicates(intList16);
+        System.out.println(intList16);
+
+        System.out.println();
+
+        ArrayList<String> myWordList = new ArrayList<String>(Arrays.asList("apple", "banana", "cherry", "donut", "bagel", "danish", "berry", "baguette", "soda"));
+        ArrayListAlgorithms.moveBWords(myWordList);
+        System.out.println(myWordList);
+
+        ArrayList<String> myWordList2 = new ArrayList<String>(Arrays.asList("apple", "cherry", "donut", "danish", "soda", "banana", "bagel",  "berry", "baguette"));
+        ArrayListAlgorithms.moveBWords(myWordList2);
+        System.out.println(myWordList2);
+
+        ArrayList<String> myWordList3 = new ArrayList<String>(Arrays.asList("banana", "bagel",  "berry", "baguette", "apple", "cherry", "donut", "danish", "soda"));
+        ArrayListAlgorithms.moveBWords(myWordList3);
+        System.out.println(myWordList3);
+
+        System.out.println();
+
+        int[] intList18 = {1, 2, 3, 2, 4, 5, 5, 6};
+        ArrayList<Integer> modes = ArrayListAlgorithms.modes(intList18);
+        System.out.println(modes);
+
+        int[] intList19 = {1, 2, 6, 2, 3, 4, 6, 5, 5, 6, 7};
+        ArrayList<Integer> modes2 = ArrayListAlgorithms.modes(intList19);
+        System.out.println(modes2);
+
+        int[] intList20 = {1, 2, 1, 2, 4, 1, 2, 4, 1, 1, 3};
+        ArrayList<Integer> modes3 = ArrayListAlgorithms.modes(intList20);
+        System.out.println(modes3);
+
+        int[] intList21 = {1, 2, 3, 4, 3, 2, 1, 4, 1, 2, 3};
+        ArrayList<Integer> modes4 = ArrayListAlgorithms.modes(intList21);
+        System.out.println(modes4);
+
+        // all numbers appear 1 time
+        int[] intList22 = {1, 2, 3, 4, 5, 6};
+        ArrayList<Integer> modes5 = ArrayListAlgorithms.modes(intList22);
+        System.out.println(modes5);
+
+        // all numbers appear 3 times
+        int[] intList23 = {1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 1, 2, 3, 4, 5, 6};
+        ArrayList<Integer> modes6 = ArrayListAlgorithms.modes(intList23);
+        System.out.println(modes6);
+
+        // this one has an extra 7, so 1, 2, 3, 4, 5, and 6 are all modes!
+        int[] intList24 = {1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6};
+        ArrayList<Integer> modes7 = ArrayListAlgorithms.modes(intList24);
+        System.out.println(modes7);
 
     }
 }
