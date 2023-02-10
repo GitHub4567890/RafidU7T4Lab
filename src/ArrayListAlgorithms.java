@@ -329,4 +329,31 @@ public class ArrayListAlgorithms {
         }
     }
 
+
+    public static void sortStudents(ArrayList<Student> studentsToSort) {
+        Student sort1;
+        Student sort2;
+        int c = 0;
+        while (c <= studentsToSort.size()) {
+            for (int i = 0; i <= studentsToSort.size() - 2; i++) {
+                sort1 = studentsToSort.get(i);
+                sort2 = studentsToSort.get(i + 1);
+                if (!(sort1.getLastName().equals(sort2.getLastName()))) {
+                    if (sort1.getLastName().compareTo(sort2.getLastName()) > 0) {
+                        studentsToSort.set(i, sort2);
+                        studentsToSort.set(i + 1, sort1);
+                    }
+                } else if (!(sort1.getFirstName().equals(sort2.getFirstName()))) {
+                    if (sort1.getFirstName().compareTo(sort2.getFirstName()) > 0) {
+                        studentsToSort.set(i, sort2);
+                        studentsToSort.set(i + 1, sort1);
+                    }
+                } else if (sort1.getGpa() < sort2.getGpa()) {
+                    studentsToSort.set(i, sort2);
+                    studentsToSort.set(i + 1, sort1);
+                }
+            }
+            c++;
+        }
+    }
 }

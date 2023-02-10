@@ -15,15 +15,15 @@ public class TheBestRunnerClass {
 
         System.out.println();
 
-        ArrayList<Integer> intList = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5));
-        int count = ArrayListAlgorithms.belowAverage(intList);
-        System.out.println(count);
-        ArrayList<Integer> intList2 = new ArrayList<Integer>(Arrays.asList(6, 3, 8, 5, 6, 3));
-        count = ArrayListAlgorithms.belowAverage(intList2);
-        System.out.println(count);
-        ArrayList<Integer> intList3 = new ArrayList<Integer>(Arrays.asList(10, 12, 9));
-        count = ArrayListAlgorithms.belowAverage(intList3);
-        System.out.println(count);
+//        ArrayList<Integer> intList = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5));
+//        int count = ArrayListAlgorithms.belowAverage(intList);
+//        System.out.println(count);
+//        ArrayList<Integer> intList2 = new ArrayList<Integer>(Arrays.asList(6, 3, 8, 5, 6, 3));
+//        count = ArrayListAlgorithms.belowAverage(intList2);
+//        System.out.println(count);
+//        ArrayList<Integer> intList3 = new ArrayList<Integer>(Arrays.asList(10, 12, 9));
+//        count = ArrayListAlgorithms.belowAverage(intList3);
+//        System.out.println(count);
 
         System.out.println();
 
@@ -174,6 +174,39 @@ public class TheBestRunnerClass {
         int[] intList24 = {1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6};
         ArrayList<Integer> modes7 = ArrayListAlgorithms.modes(intList24);
         System.out.println(modes7);
+
+        System.out.println();
+
+        Student s1 = new Student("Abby", "Smith", 96.7);
+        Student s2 = new Student("Michelle", "Jones", 98.1);
+        Student s3 = new Student("Chase", "Bean", 95.2);
+        Student s4 = new Student("Jack", "Clancy", 97.3);
+        Student s5 = new Student("Brittany", "Jones", 95.5);
+        Student s6 = new Student("Lisa", "Frank", 92.4);
+        Student s7 = new Student("Marie", "Angelina", 96.5);
+        Student s8 = new Student("Peter", "Frank", 97.9);
+        Student s9 = new Student("Lisa", "Frank", 99.5);
+        Student s10 = new Student("Dean", "Jones", 93.2);
+
+        ArrayList<Student> students = new ArrayList<Student>(Arrays.asList(s1, s2, s3, s4, s5, s6, s7, s8, s9, s10));
+        System.out.println("UNSORTED:");
+        int count = 1;
+        for (Student student : students) {
+            System.out.println(count + ": " + student);
+            count++;
+        }
+
+        // sort students
+        ArrayListAlgorithms.sortStudents(students);
+
+        System.out.println("---------------------------");
+        System.out.println("SORTED:");
+        count = 1;
+        for (Student student : students) {
+            System.out.println(count + ": " + student);
+            count++;
+        }
+
 
     }
 }
